@@ -128,9 +128,9 @@ export function main() {
 /* Função com os dados da pessoa desenvolvedora */
 function sobre(): void {
     console.log("\n*****************************************************");
-    console.log("Projeto Desenvolvido por: ");
-    console.log("Generation Brasil - generation@generation.org");
-    console.log("github.com/conteudoGeneration");
+    console.log("Projeto Desenvolvido por: Fernanda Paoleschi");
+    console.log("Generation Brasil - fernandas1@generation.org");
+    console.log("github.com/fernandapaoleschi");
     console.log("*****************************************************");
 }
 
