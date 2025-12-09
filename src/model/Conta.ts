@@ -1,11 +1,17 @@
-export class Conta {
+// Exporta a classe Conta para que possa ser usada em outros arquivos
+export abstract class Conta {
+
+    // Atributos privados — só podem ser acessados dentro da classe
     private _numero: number;
     private _agencia: number;
     private _tipo: number;
     private _titular: string;
     private _saldo: number;
 
+    // Construtor — é executado quando criamos uma nova Conta com "new Conta()"
     constructor(numero: number, agencia: number, tipo: number, titular: string, saldo: number){
+        // "this" se refere ao objeto atual
+        // Atribuindo os valores recebidos aos atributos internos
         this._numero = numero;
         this._agencia = agencia;
         this._tipo = tipo;
@@ -13,6 +19,11 @@ export class Conta {
         this._saldo = saldo;
     }
     
+    /* ------------------------ GETTERS E SETTERS ------------------------ 
+       Getters permitem LER atributos privados.
+       Setters permitem ALTERAR atributos privados com controle.
+    */
+
     public get numero(){
         return this._numero;
     }
@@ -53,6 +64,9 @@ export class Conta {
         this._saldo = saldo;
     }
 
+    /* ------------------------ MÉTODOS DA CONTA ------------------------ */
+
+    // Deposita um valor na conta, somando ao saldo
     public sacar(valor: number): boolean{
         if(this._saldo < valor){
             console.log("\nSaldo insuficiente!");
